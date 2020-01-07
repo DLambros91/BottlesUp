@@ -1,4 +1,4 @@
-package main.java.com.example.bottlesup.models;
+package com.example.bottlesup.models;
 
 import com.example.bottlesup.models.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
@@ -14,7 +14,7 @@ import java.util.Set;
     @UniqueConstraint(columnNames = {
         "username"
     }),
-    @UniqueContraint(columnNames = {
+    @UniqueConstraint(columnNames = {
         "email"
     })
 })
@@ -46,9 +46,6 @@ public class User extends DateAudit {
     @Size(max = 100)
     private String password;
 
-    @NotBlank
-    private DateTime joined;
-
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_roles",
                 joinColumns = @JoinColumn(name = "user_id"),
@@ -59,13 +56,12 @@ public class User extends DateAudit {
         // Default Constructor
     }
 
-    public User(String firstName, String lastName, String username, String email, String password, DateTime joined){
+    public User(String firstName, String lastName, String username, String email, String password){
         this.firstname = firstName;
         this.lastname = lastName;
         this.username = username;
         this.email = email;
         this.password = password;
-        this.joined = joined;
     }
 
     public Long getId() {
@@ -85,7 +81,7 @@ public class User extends DateAudit {
     }
 
     public String getLastName() {
-        return lastName;
+        return lastname;
     }
 
     public void setLastName(String lastname) {
@@ -114,14 +110,6 @@ public class User extends DateAudit {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public DateTime getJoined() {
-        return joined;
-    }
-
-    public void setJoined(DateTime joined) {
-        this.joined = joined;
     }
 
     public Set<Role> getRoles() {

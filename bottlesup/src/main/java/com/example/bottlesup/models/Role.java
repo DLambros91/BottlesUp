@@ -1,4 +1,4 @@
-package main.java.com.example.bottlesup.models;
+package com.example.bottlesup.models;
 
 import org.hibernate.annotations.NaturalId;
 import javax.persistence.*;

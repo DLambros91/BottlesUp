@@ -1,4 +1,4 @@
-package main.java.com.example.bottlesup.config;
+package com.example.bottlesup.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;

@@ -1,4 +1,4 @@
-package main.java.com.example.bottlesup.models.audit;
+package com.example.bottlesup.models.audit;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;

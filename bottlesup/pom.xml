@@ -53,18 +53,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
-	<!-- For Working with JSON Web Tokens (JWT) -->
+		<!-- For Working with JSON Web Tokens (JWT) -->
 	<dependency>
 		<groupId>io.jsonwebtoken</groupId>
 		<artifactId>jjwt</artifactId>
@@ -76,4 +65,16 @@
 		<groupId>com.fasterxml.jackson.datatype</groupId>
 		<artifactId>jackson-datatype-jsr310</artifactId>
 	</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	
 </project>
